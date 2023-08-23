@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var request=new XMLHttpRequest()
+        // I am using json data of restcountries.com
+        request.open('GET','https://restcountries.com/v3.1/all')
+
+        //sending an connection
+        request.send()
+        request.onload= function(){
+            var data=JSON.parse(request.response)
+            console.log(data)
+            //to get all countries
+            //for loop 
+            console.log("Result of For Loop")
+            for(var i=0;i<data.length;i++){
+                console.log("Country: "+data[i].name.official)
+            }
+            // for of
+            console.log("Result of For of Loop")
+            for(var obj of data){
+               console.log(`Country Name: ${obj.name.official}`)
+            }
+
+            //for in loop
+            console.log("Result of For in Loop")
+            for(var index in data){
+              //  console.log(index)
+                console.log(`Country Name: ${data[index].name.official}`)
+            }
+
+            // ForEach
+            data.forEach(obj => {
+                Object.entries(obj).forEach(([key, value]) => {
+                    console.log(`${key} ${value}`);
+                });
+                console.log('-------------------'); // separator for each records
+            });
+            
+        }
+       
+    </script>
+</body>
+</html>

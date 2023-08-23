@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Data in JSON Format</title>
+</head>
+<body>
+    <script>
+        let resumeData = {
+                            "basics": {
+                                "name": "Dilip Kanogiya",
+                                "label": "PHP & Laravel Developer",
+                                "image": "https://www.dilipkanogiya.com/wp-content/uploads/2019/07/dilip.jpg",
+                                "email": "dilipkanogiya@gmail.com",
+                                "phone": "+91-7503399754",
+                                "url": "https://www.dilipkanogiya.com",
+                                "summary": "I am a PHP Developer. I have 7+ Year experienced in Website Desiging and Development",
+                                "location": {
+                                            "address": "Indira Nagar",
+                                            "postalCode": "226016",
+                                            "city": "Lucknow",
+                                            "state": "Uttar Pradesh",
+                                            "country": "India",
+                                            },
+                                "profiles": [{
+                                            "network": "Github",
+                                            "username": "dilipkanogiya",
+                                            "url": "https://github.com/dilipkanogiya"
+                                            }]
+                            },
+                            "work": [{
+                                            "name": "BookYourCV",
+                                            "position": "Full Stack Developer",
+                                            "url": "https://bookyourcv.com",
+                                            "startDate": "2021-12-01",
+                                            "endDate": "Present",
+                                            "summary": "My role is to take care of all the websites and make then running. I have to design resumes in Adobe Illustrator",
+                                        },
+                                        {
+                                            "name": "Uclik Technologies Private Limites",
+                                            "position": "Full Stack Developer",
+                                            "url": "https://www.ucliktechnologies.com/",
+                                            "startDate": "Sep 2019",
+                                            "endDate": "Sep 2022",
+                                            "summary": "My role is to understand clients' needs and deliver the website. My core knowledge is PHP, WordPress, and Laravel.",
+                                        },
+                                        {
+                                            "name": "Phonotronics International Inc",
+                                            "position": "PHP Developer",
+                                            "url": "https://piiwebtech.com/",
+                                            "startDate": "Oct 2017",
+                                            "endDate": "Oct 2018",
+                                            "summary": "Worked as PHP Developer. Worked on various projects on Wordpress, Larvel Framework and PHP",
+                                        },
+                                        {
+                                            "name": "Webzpapa",
+                                            "position": "PHP Developer",
+                                            "url": "https://piiwebtech.com/",
+                                            "startDate": "Jun 2015",
+                                            "endDate": "Sep 2017",
+                                            "summary": "Worked as a PHP Developer. Worked on WordPress Theme Development and Customisation.",
+                                        },
+                            ],
+                            "education": [{
+                                "institution": "BABU BANARASI DAS NORTHERN INDIA INSTITUTE OF TECHNOLOGY, LUCKNOW",
+                                "url": "https://bbdniit.ac.in/",
+                                "area": "Electrical Engg.",
+                                "course": "B Tech.",
+                                "startDate": "2009",
+                                "endDate": "2014",
+                                "score": "62",
+                            }],
+                            "certificates": [{
+                                "name": "Diploma in PHP LAMP Stack",
+                                "date": "2015",
+                                "issuer": "NIIT",
+                                "url": "https://www.niit.com/india/"
+                            }],
+                            "skills": [
+                                {
+                                    "name": "PHP",
+                                    "level": "Intermidiate"
+                                },
+                                {
+                                    "name": "HTML",
+                                    "level": "Advance"
+                                },
+                                {
+                                    "name": "CSS",
+                                    "level": "Intermidiate"
+                                },
+                                {
+                                    "name": "JS",
+                                    "level": "Biginner"
+                                },
+                                {
+                                    "name": "Laravel",
+                                    "level": "Basics"
+                                }
+                            ],
+                            "languages": [
+                                {
+                                    "language": "English",
+                                    "fluency": "Intermidiate"
+                                },
+                                {
+                                    "language": "Hindi",
+                                    "fluency": "Native speaker"
+                                }
+                            ],
+                            "references": [{
+                                "name": "Vijay Shankar",
+                                "company": "Webzpapa",
+                            }]                            
+                        }
+        console.log(JSON.stringify(resumeData))
+    </script>
+    
+</body>
+</html>
