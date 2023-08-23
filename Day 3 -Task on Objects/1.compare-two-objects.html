@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Http Request</title>
+</head>
+<body>
+    <script>
+        var obj1 = {name:"Person 1", age:5};
+        var obj2 = {age:5, name:"Person 1"};
+
+        var flag=true;
+
+        if(Object.keys(obj1).length==Object.keys(obj2).length){
+            for(key in obj1) { 
+                if(obj1[key] == obj2[key]) {
+                    continue;
+                }
+                else {
+                    flag=false;
+                    break;
+                }
+            }
+        }
+        else {
+            flag=false;
+        }
+        console.log("Is object equal: "+flag);
+    </script>
+</body>
+</html>

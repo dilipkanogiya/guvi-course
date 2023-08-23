@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display All Flags</title>
+</head>
+<body>
+    <script>
+        // create new xML object
+        var request = new XMLHttpRequest();
+        //open an conection
+        request.open("GET", "https://restcountries.com/v3.1/all");
+        // 
+        request.send();
+        request.onload = function (){
+            // console.log(request.response);
+            var data = JSON.parse(request.response);
+            
+            // for in loop
+            for(var index in data){
+                // console.log(obj)
+                console.log(data[index].flag)
+            }
+        }
+    </script>
+</body>
+</html>
