@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs - People</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name, age, course, city, institue){
+                this.name = name
+                this.age = age
+                this.course = course
+                this.city = city
+                this.institue = institue
+            }
+
+            getDetails(){
+                console.log(`I am ${this.name}, I'm ${this.age} old and I'm from ${this.city}. I'm learing ${this.course} from ${this.institue}.`)
+            }
+
+        }
+
+        let p1 = new Person("Dilip", 32, "Jasvascript", 'Lucknow', 'Guvi')
+        let p2 = new Person("Aman", 25, "MERN", 'Delhi', 'Guvi')
+
+        p1.getDetails()
+        p2.getDetails()
+    </script>
+</body>
+</html>

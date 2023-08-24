@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+</head>
+<body>
+    <script>
+        class Movie{
+            constructor(title, studio, rating = "PG"){
+                this.title = title
+                this.studio = studio
+                this.rating = rating
+                
+            }
+
+            getPG(arr){
+                console.log("getPg is called")
+                let newArr = []
+                for(let i=0; i<arr.length; i++){
+                    if(arr[i].rating == "PG"){
+                        newArr.push(arr[i])
+                    }
+                }
+                console.log(newArr);
+            }
+
+        }
+
+        let m1 = new Movie("Casino Royale", "Eon Productions", "PG13")
+        let m2 = new Movie("RRR", "DVV Entertainment", "PG13")
+        let m3 = new Movie("Pathaan", "Yash Raj Films", "PG13")
+        let m4 = new Movie("Gadar 2", "Zee Studios")
+        let m5 = new Movie("OMG", "Cape of Good Films", "PG")
+        let movieArr = [m1, m2, m3, m4, m5];
+        console.log(movieArr)
+        m1.getPG(movieArr)
+        // console.log(m2)s
+
+    </script>
+</body>
+</html>

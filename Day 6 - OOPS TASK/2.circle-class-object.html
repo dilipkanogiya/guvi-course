@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+</head>
+<body>
+    <script>
+        class Circle{
+            constructor(radius=1.0, color="red"){
+                this.radius = radius;
+                this.color = color;
+                
+            }
+            getRadius(){
+                console.log(`Circle Radius is: ${this.radius}`)
+            }
+            setRadius(radius){
+                this.radius = radius;
+            }
+            getColor(){
+                console.log(`Circle Color is: ${this.color}`)
+            }
+            setColor(color){
+                this.color = color
+            }
+            toString(){
+                return "Radius: " + this.radius + " Color: " + this.color;
+            };
+            getArea(){
+                let area = (Math.PI) * this.radius * this.radius
+                console.log(`Circle Color is: ${area}`)
+            }
+            getCircumference(){
+                let circumf = 2 * (Math.PI) * this.radius
+                console.log(`Circle Circumference is: ${circumf}`)
+            }
+
+        }
+
+        let c1 = new Circle()
+        
+        // check circle instance 
+        console.log(c1)
+        // get Radius of circle
+        c1.getRadius()
+        // get color of circle
+        c1.getColor()
+        // get area of circle
+        c1.getArea()
+        // get circumference of circle
+        c1.getCircumference()
+        // change color of cicle to new value
+        c1.setColor("Green")
+        // change radius of cicle to new value
+        c1.setRadius(3.2)
+        // print updated value
+        console.log(c1.toString())
+        c1.getArea()
+        c1.getCircumference()
+
+
+        console.log(c2)
+
+    </script>
+</body>
+</html>
