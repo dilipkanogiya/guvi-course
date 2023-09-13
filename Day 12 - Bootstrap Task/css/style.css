@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #c9d2c5;
+}
+header{
+    background: #2f3d46;
+    color: #fff;
+    padding: 1rem 0;
+}
+header i{
+    font-size: 3rem;
+}
+header h1{
+    margin-bottom: 0;
+    text-align: center;
+}
+.sidebar, .box{
+    background: #353535;
+    border-radius: 20px;
+}
+
+.sidebar{
+    height: 75vh;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box{
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mt-6{
+    margin-top: 4rem;
+}
+
+.event-box{
+    border-radius: 10px;
+    padding:10px
+}
+.event-box h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.event-image img{
+    border-radius: 10px;
+}
+
+.seats{
+    margin-bottom: 10px;
+}
+
+.event-box{
+    margin-bottom: 20px;
+}
