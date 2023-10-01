@@ -1,0 +1,20 @@
+body{
+    background-color: #1b343c;
+}
+
+h1{
+    color:#fff;
+    margin: 40px 0;
+}
+
+.card .card-header h2{
+    text-align: center;
+    color: #fff;
+}
+
+.card .card-body .card-img-top{
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    margin-bottom: 40px
+}
