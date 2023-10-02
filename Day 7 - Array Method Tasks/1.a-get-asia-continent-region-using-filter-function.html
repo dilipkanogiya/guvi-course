@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get all the countries from Asia continent/region using Filter function</title>
+</head>
+<body>
+    <h1>Get all the countries from Asia continent/region using Filter function</h1>
+    <h5>Result is in Console</h5>
+    <script>
+        var request=new XMLHttpRequest()
+
+        // open an connection
+        request.open('GET','https://restcountries.com/v3.1/all')
+
+        //sending an connection
+        request.send()
+
+        request.onload= function(){
+            // console.log(request.response)
+            var data=JSON.parse(request.response)
+            // console.log(data)
+
+            // to Get all the countries from Asia continent
+            var output=data.filter((result)=>result.continents == 'Asia').map((country) => country.name)
+            console.log(output)
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country which uses US Dollars as currency</title>
+</head>
+<body>
+    <h1>Country which uses US Dollars as currency</h1>
+    <h5>Result is in Console</h5>
+    <script>
+        var request=new XMLHttpRequest()
+
+        // open an connection
+        request.open('GET','https://restcountries.com/v3.1/all')
+
+        //sending an connection
+        request.send()
+
+        request.onload= function(){
+            var data=JSON.parse(request.response)
+            // console.log(data)
+
+            // Filter countries that use USD as currency
+            var usdCountries = data.filter(function (country) {
+                return country.currencies && country.currencies.USD;
+            });
+
+            // Extract country names
+            var usdCountryNames = usdCountries.map(function (country) {
+                return country.name.common;
+            });
+
+            // Output the countries using USD as currency
+            console.log("Countries using US Dollar as currency:");
+            console.log(usdCountryNames);
+        }
+        
+    </script>
+</body>
+</html>
