@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert all the strings to title caps in a string array</title>
+</head>
+<body>
+    <script>
+        // iife function
+        (function (str) {
+            var newStr = str.toLowerCase().split(" ");
+            for(var i = 0; i< newStr.length; i++){
+                newStr[i] = newStr[i][0].toUpperCase() + newStr[i].slice(1);
+            }
+            console.log(newStr.join(" "));
+            return newStr;
+        })("Change to TITLE String");
+
+        // annonymous function
+        var titleCase = function(str){
+            var newStr = str.toLowerCase().split(" ");
+            for(var i = 0; i< newStr.length; i++){
+                newStr[i] = newStr[i][0].toUpperCase() + newStr[i].slice(1);
+            }
+            console.log(newStr.join(" "));
+            return newStr;
+        }
+        titleCase("antoher sentence to chnage IN Title case");
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print odd numbers in an array</title>
+</head>
+<body>
+    <script>
+        // iife function
+        (
+            function(arr) {
+                // console.log("IIFE Function")
+                for(var i =0; i<arr.length;i++){
+                    if(arr[i]%2 !== 0){
+                        console.log(arr[i]);
+                    }
+                }
+            }
+        )([2,4,3,5,11,14,12,19]);
+        
+        // annonymous function
+        var annonymousOdd = function(arr){
+            // console.log("Annonymous Fun")
+            for(var i =0; i<arr.length;i++){
+                    if(arr[i]%2 !== 0){
+                        console.log(arr[i]);
+                    }
+                }
+        }
+        annonymousOdd([2,4,3,5,11,14,12,19])
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return all the prime numbers in an array</title>
+</head>
+<body>
+  <script>
+    // IIFE Function
+    var nums = [2, 11,4, 3, 15, 7, 111, 13, 27, 9, 23];
+    var primeNumbs = [];
+
+    var isPrime = (function() {
+        function isPrimeNumber(number) {
+            if (number <= 1) {
+                return false;
+            }
+            
+            if (number <= 3) {
+                return true;
+            }
+            
+            if (number % 2 === 0 || number % 3 === 0) {
+                return false;
+            }
+            
+            for (let i = 5; i * i <= number; i += 6) {
+                if (number % i === 0 || number % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+        
+        return isPrimeNumber;
+    })();
+
+    for (var number of nums) {
+        if (isPrime(number)) {
+            primeNumbs.push(number);
+        }
+    }
+
+    console.log("Prime numbers in the array:", primeNumbs);
+
+
+
+    // Anonymous Function
+    var isPrimeAnonymous = function(number) {
+        if (number <= 1) {
+            return false;
+        }
+        
+        if (number <= 3) {
+            return true;
+        }
+        
+        if (number % 2 === 0 || number % 3 === 0) {
+            return false;
+        }
+        
+        for (let i = 5; i * i <= number; i += 6) {
+            if (number % i === 0 || number % (i + 2) === 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    };
+
+    var numbers = [2, 4, 3, 15, 7, 111, 13, 27, 9, 23];
+    var primeNumbers = [];
+
+    for (var number of numbers) {
+        if (isPrimeAnonymous(number)) {
+            primeNumbers.push(number);
+        }
+    }
+
+    console.log("Prime numbers in the array:", primeNumbers);
+
+  </script>
+  
+</body>
+</html>
